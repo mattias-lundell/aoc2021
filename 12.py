@@ -60,9 +60,11 @@ def backtrack2(g, s, e, visited, path, paths, revisited):
 
 
 def prep(data):
+
+    #print(data)
     g = defaultdict(list)
     for i, row in enumerate(data.split('\n')):
-        print(row)
+     #   print(row)
         a, b = row.split('-')[:2]
         if b != 'start':
             g[a].append(b)
@@ -73,6 +75,6 @@ def prep(data):
 
 if __name__ == '__main__':
     print("part1 test", part1(prep(test)))
-    print("part1 real", part1(prep(open('in12.txt').read())))
+    print("part1 real", part1(prep(open('12.txt').read())))
     print("part2 test", part2(prep(test)))
-    print("part2 real", part2(prep(open('in12.txt').read())))
+    print("part2 real", part2(prep(open('12.txt').read())))
